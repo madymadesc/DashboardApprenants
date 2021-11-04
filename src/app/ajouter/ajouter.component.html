@@ -1,73 +1,106 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+  <mat-sidenav #drawer class="sidenav late" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list class="lat">
       <a mat-list-item href="#"routerLink="/dashboard">Home</a>
       <a mat-list-item href="#"routerLink="/#">Profile</a>
       <a mat-list-item href="#"routerLink="/ajouter">Add User</a>
       <a mat-list-item href="#"routerLink="/users">Users</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar>
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-
-    </mat-toolbar>
+  <mat-sidenav-content class="boddy">
     <!-- Add Content Here -->
 
-
-<form>
-  <div class="container">
-      <div class="row">
-          <div class="text-center">
-              <img class="mx-auto d-block" src="assets/images/add-user.png" alt="Add Users">
-              <h6>Add Users</h6>
-          </div>
-      </div>
-    <div class="row justify-content-md-center">
-      <div class="col col-lg-5">
-  <div class="form-group">
-    <label for="">Nom</label>
-    <input class="text" type="text" class="form-control form-control mb-3" name="nom" placeholder="nom" required="">
-  </div>
-  <div class="form-group">
-    <label for="">Prénom</label>
-    <input class="text" type="text" class="form-control form-control mb-3" name="prenom" placeholder="prénnom" required="">
-  </div>
-  <div class="form-group">
-    <label for="">Email</label>
-    <input class="text email" type="email" class="form-control form-control mb-3" name="email" placeholder="Email" required="">
-  </div>
-  <div class="form-group">
-    <label for="">Mobile</label>
-    <input class="text" type="text" class="form-control form-control mb-3" name="mobile" placeholder="Mobile" required="">
-  </div>
-  <div class="form-group">
-    <label for="">Profile</label>
-    <input class="text" type="text" class="form-control form-control mb-3" name="Profile" placeholder="Profile" required="">
-  </div>
-  <div class="form-group">
-    <label for="">Password</label>
-    <input class="text" type="password" class="form-control form-control mb-3" name="password" placeholder="Password" required="">
-  </div>
-  <div class="form-group">
-    <button type="submit" class="btn form-control btn-primary form-control mb-3">Ajouter</button>
+    <div class="container">
+      <div class="text-center">
+        <img class="mx-auto d-block" src="assets/images/add-user.png" alt="Add Users">
+        <h1>Add Users</h1>
     </div>
-</div>
-</div>
-</div>
-</form>
-
+    <div class="col-lg-12 well">
+    <div class="row fboddy">
+          <form class="fbdy">
+            <div class="col-sm-12 dboddy">
+              <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <label for="">Nom</label>
+                    <input class="text" type="text" class="form-control form-control mb-3" name="nom" placeholder="nom" required="">
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <label for="">Prénom</label>
+                    <input class="text" type="text" class="form-control form-control mb-3" name="prenom" placeholder="prénnom" required="">
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 form-group">
+                      <label for="">Age</label>
+                      <input class="text" type="text" class="form-control form-control mb-3" name="age" placeholder="age" required="">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                      <label for="">Téléphone*</label>
+                      <input class="text" type="text" class="form-control form-control mb-3" name="telephone" placeholder="Téléphone" required="">
+                    </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6 form-group">
+                        <label for="">Email</label>
+                        <input class="text email" type="email" class="form-control form-control mb-3" name="email" placeholder="Email" required="">
+                      </div>
+                      <div class="col-sm-6 form-group">
+                        <label for="">Login</label>
+                        <input class="text" type="text" class="form-control form-control mb-3" name="login" placeholder="User name" required="">
+                      </div>
+                      </div>
+              <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <label for="">Password</label>
+                    <input class="text" type="password" class="form-control form-control mb-3" name="password" placeholder="Password" required="">
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label for="">Genre</label>
+                  <select class="form-control" name="genre" id="sel1">
+                    <option>Homme</option>
+                    <option>Femme</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <label for="">Statut</label>
+                    <select class="form-control" name="profile" id="sel1">
+                     <option>Active</option>
+                     <option>Desactive</option>
+                    </select>
+                    <br>
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label for="sel1">Profile</label>
+                  <select class="form-control" name="profile" id="sel1">
+                    <option>Apprenant</option>
+                    <option>Formateur</option>
+                  </select>
+                  <br>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <label for="">Date de Création</label>
+                    <input class="text" type="date" class="form-control mb-3" name="profile" placeholder="Date de Création" required="">
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <label for="">Date de Modification</label>
+                    <input class="text" type="date" class="form-control mb-3" name="profile" placeholder="Date de Modification" required="">
+                  </div>
+                  </div>
+            </div>
+            <div class="form-group bton">
+              <button type="submit" class="btn form-control form-control mb-3">Ajouter</button>
+              </div>
+          </form>
+          </div>
+    </div>
+    </div>
 
   </mat-sidenav-content>
 </mat-sidenav-container>

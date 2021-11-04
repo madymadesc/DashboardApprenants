@@ -1,10 +1,9 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+  <mat-sidenav #drawer class="sidenav late" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list class="lat">
       <a mat-list-item href="#"routerLink="/dashboard">Home</a>
       <a mat-list-item href="#"routerLink="/#">Profile</a>
       <a mat-list-item href="#"routerLink="/ajouter">Add User</a>
@@ -12,18 +11,46 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar>
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>DashboardApprenants</span>
-    </mat-toolbar>
-    <!-- Add Content Here -->
 
+    <!-- Add Content Here -->
+    <ul>
+      <li><a  href="#home">Liste</a></li>
+      <li><a href="#news">Presence</a></li>
+      <li><a href="#contact">Modifier</a></li>
+    </ul>
+
+    <p>Listes des utilisateurs</p>
+
+<table class="table table-striped tabble">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Prénom</th>
+      <th scope="col">Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
+      <td>Camara</td>
+      <td>Mady</td>
+      <td>Apprenant</td>
+    </tr>
+    <tr >
+      <td>Camara</td>
+      <td>Mady</td>
+      <td>Apprenant</td>
+    </tr>
+    <tr >
+      <td>Camara</td>
+      <td>Mady</td>
+      <td>Apprenant</td>
+    </tr>
+    <tr >
+      <td>Camara</td>
+      <td>Mady</td>
+      <td>Apprenant</td>
+    </tr>
+  </tbody>
+</table>
   </mat-sidenav-content>
 </mat-sidenav-container>

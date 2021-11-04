@@ -16,6 +16,32 @@
   z-index: 1;
 }
 //bbbbbbbbbbbb
+.mennu{
+  background-color: #ffffff;
+
+}
+/////
+
+.late{
+  background-color: #FF3C00;
+}
+.lat{
+  margin-top: 50%;
+  width: 180px;
+}
+.lat a{
+  background-color: white;
+  display: block;
+  font-size: 20px;
+  border-radius: 15px;
+  margin:14px 5px;
+  padding-left: 20%;
+}
+.lat a:hover{
+  background-color: #FFD5C9;
+  color: orangered;
+}
+
 .cercle{
   text-align:center;
   color:rgb(0, 0, 0);
@@ -24,4 +50,11 @@
   border:15px solid #FF3C00 ;
   max-width:120px;
   max-height: 120px;
+}
+#global #gauche {
+  float:left;
+  width:60%;
+}
+#global #droite {
+  margin-left:60%
 }
