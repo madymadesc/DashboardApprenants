@@ -1,0 +1,74 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#"routerLink="/dashboard">Home</a>
+      <a mat-list-item href="#"routerLink="/#">Profile</a>
+      <a mat-list-item href="#"routerLink="/ajouter">Add User</a>
+      <a mat-list-item href="#"routerLink="/users">Users</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+    </mat-toolbar>
+    <!-- Add Content Here -->
+
+
+<form>
+  <div class="container">
+      <div class="row">
+          <div class="text-center">
+              <img class="mx-auto d-block" src="assets/images/add-user.png" alt="Add Users">
+              <h6>Add Users</h6>
+          </div>
+      </div>
+    <div class="row justify-content-md-center">
+      <div class="col col-lg-5">
+  <div class="form-group">
+    <label for="">Nom</label>
+    <input class="text" type="text" class="form-control form-control mb-3" name="nom" placeholder="nom" required="">
+  </div>
+  <div class="form-group">
+    <label for="">Prénom</label>
+    <input class="text" type="text" class="form-control form-control mb-3" name="prenom" placeholder="prénnom" required="">
+  </div>
+  <div class="form-group">
+    <label for="">Email</label>
+    <input class="text email" type="email" class="form-control form-control mb-3" name="email" placeholder="Email" required="">
+  </div>
+  <div class="form-group">
+    <label for="">Mobile</label>
+    <input class="text" type="text" class="form-control form-control mb-3" name="mobile" placeholder="Mobile" required="">
+  </div>
+  <div class="form-group">
+    <label for="">Profile</label>
+    <input class="text" type="text" class="form-control form-control mb-3" name="Profile" placeholder="Profile" required="">
+  </div>
+  <div class="form-group">
+    <label for="">Password</label>
+    <input class="text" type="password" class="form-control form-control mb-3" name="password" placeholder="Password" required="">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn form-control btn-primary form-control mb-3">Ajouter</button>
+    </div>
+</div>
+</div>
+</div>
+</form>
+
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

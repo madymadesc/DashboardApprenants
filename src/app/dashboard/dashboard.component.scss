@@ -1,0 +1,27 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+//bbbbbbbbbbbb
+.cercle{
+  text-align:center;
+  color:rgb(0, 0, 0);
+  background:#ffffff ;
+  border-radius:50%;
+  border:15px solid #FF3C00 ;
+  max-width:120px;
+  max-height: 120px;
+}
