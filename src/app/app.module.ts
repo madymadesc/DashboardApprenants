@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AjouterComponent } from './ajouter/ajouter.component';
-import { ListeComponent } from './liste/liste.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -15,15 +14,20 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { UsersComponent } from './users/users.component';
+import { PresenceComponent } from './presence/presence.component';
+import { ModifierComponent } from './modifier/modifier.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     AjouterComponent,
-    ListeComponent,
     LoginComponent,
-    UsersComponent
+    UsersComponent,
+    PresenceComponent,
+    ModifierComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
