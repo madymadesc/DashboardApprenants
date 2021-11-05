@@ -26,7 +26,7 @@ export class ServiceService {
   }
   ajouterApprenant(data: any){
     console.log(data);
-    return this.http.post(this.url+"/ajoutUtilisateur", data);
+    return this.http.post("http://localhost:8080/ajoutUtilisateur", data);
 
   // Url= 'http://localhost:8080/dash_db/utilisateur';
   // getUsers(){

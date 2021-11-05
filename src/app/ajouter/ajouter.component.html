@@ -24,14 +24,11 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <h1>Add Users</h1>
     </mat-toolbar>
     <!-- Add Content Here -->
-
     <div class="container">
       <div class="text-center">
         <img class="mx-auto d-block" src="assets/images/add-user.png" alt="Add Users">
-        <h1>Add Users</h1>
     </div>
     <div class="col-lg-12 well">
     <div class="row fboddy">
@@ -74,7 +71,7 @@
                 </div>
                 <div class="col-sm-6 form-group">
                   <label for="">Genre</label>
-                  <select class="form-control" ngModel name="genre" id="sel1">
+                  <select class="form-select" ngModel name="genre" id="sel1">
                     <option>Homme</option>
                     <option>Femme</option>
                   </select>
@@ -83,7 +80,7 @@
               <div class="row">
                 <div class="col-sm-6 form-group">
                   <label for="">Statut </label>
-                    <select class="form-control" ngModel name="status_utilisateur" id="sel1">
+                    <select class="form-select" ngModel name="status_utilisateur" id="sel1">
                      <option>Active</option>
                      <option>Desactive</option>
                     </select>
@@ -91,23 +88,13 @@
                 </div>
                 <div class="col-sm-6 form-group">
                   <label for="sel1">Profile</label>
-                  <select class="form-control" ngModel name="profil" id="sel1">
+                  <select class="form-select" ngModel name="profil" id="sel1">
                     <option>Apprenant</option>
                     <option>Formateur</option>
                   </select>
                   <br>
                 </div>
                 </div>
-                <div class="row">
-                  <div class="col-sm-6 form-group">
-                    <label for="">Date de Création</label>
-                    <input class="text" type="date" ngModel  class="form-control mb-3" name="dateCreation" placeholder="Date de Création" required="">
-                  </div>
-                  <div class="col-sm-6 form-group">
-                    <label for="">Date de Modification</label>
-                    <input class="text" ngModel type="date" class="form-control mb-3" name="dateModification" placeholder="Date de Modification" required="">
-                  </div>
-                  </div>
             </div>
             <div class="form-group bton">
               <button type="submit" class="btn form-control form-control mb-3">Ajouter</button>

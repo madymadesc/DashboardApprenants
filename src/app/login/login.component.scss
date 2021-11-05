@@ -1,0 +1,55 @@
+
+//
+.boddy{
+  background-color: #FFD5C9;
+}
+.bg-img {
+  /* image */
+  background-image: url("../../assets/images/backg1.png");
+  height: 800px;
+  min-height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+//
+.container img{
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin-left: 300px;
+}
+/* form container */
+.container {
+  position: absolute;
+  right: 0;
+  width: 800px;
+  padding: 16px;
+  background-color: #FFD5C9;
+}
+
+/* input */
+input{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+
+/*submit button */
+.btn {
+  width: 200px;
+ margin-left: 300px;
+  background-color: orangered;
+  border-radius: 15px;
+  color: #ddd;
+  font-size: 25px;
+}
+
+.btn:hover {
+  background-color: #db3309;
+}

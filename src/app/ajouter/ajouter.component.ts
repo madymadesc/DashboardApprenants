@@ -44,10 +44,10 @@ export class AjouterComponent implements OnInit {
 
   }
   SaveData(form: NgForm){
-    var transformJson= JSON.stringify(this.serv.ajouterApprenant(form.value));
-    var add= JSON.parse(transformJson);
-    console.log(add);
-    return add;
+    this.serv.ajouterApprenant(form.value);
+
+    console.log(this.form.value);
+
   }
 
 
