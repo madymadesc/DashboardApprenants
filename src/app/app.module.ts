@@ -17,6 +17,7 @@ import { UsersComponent } from './users/users.component';
 import { PresenceComponent } from './presence/presence.component';
 import { ModifierComponent } from './modifier/modifier.component';
 import { ProfileComponent } from './profile/profile.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ProfileComponent } from './profile/profile.component';
     ProfileComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

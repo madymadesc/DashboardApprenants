@@ -55,30 +55,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr >
-      <td>Camara</td>
-      <td>Mady</td>
-      <td>Apprenant</td>
-    </tr>
-    <tr >
-      <td>Camara</td>
-      <td>Mady</td>
-      <td>Apprenant</td>
-    </tr>
-    <tr >
-      <td>Camara</td>
-      <td>Mady</td>
-      <td>Apprenant</td>
-    </tr>
-    <tr >
-      <td>Camara</td>
-      <td>Mady</td>
-      <td>Apprenant</td>
+    <tr *ngFor="let item of items" >
+      <td>{{item.nom}}</td>
+      <td>{{item.prenom}}</td>
+      <td>{{item.profil}}</td>
     </tr>
   </tbody>
 </table>
 </div>
 </div>
-
   </mat-sidenav-content>
 </mat-sidenav-container>
