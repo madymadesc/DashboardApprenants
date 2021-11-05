@@ -35,46 +35,46 @@
     </div>
     <div class="col-lg-12 well">
     <div class="row fboddy">
-          <form class="fbdy">
+          <form class="fbdy" #form="ngForm" (ngSubmit)="SaveData(form)">
             <div class="col-sm-12 dboddy">
               <div class="row">
                   <div class="col-sm-6 form-group">
                     <label for="">Nom</label>
-                    <input class="text" type="text" class="form-control form-control mb-3" name="nom" placeholder="nom" required="">
+                    <input class="text" type="text" ngModel class="form-control form-control mb-3" name="nom" placeholder="nom" required="">
                   </div>
                   <div class="col-sm-6 form-group">
                     <label for="">Prénom</label>
-                    <input class="text" type="text" class="form-control form-control mb-3" name="prenom" placeholder="prénnom" required="">
+                    <input class="text" type="text" ngModel class="form-control form-control mb-3" name="prenom" placeholder="prénnom" required="">
                   </div>
                   </div>
                   <div class="row">
                     <div class="col-sm-6 form-group">
                       <label for="">Age</label>
-                      <input class="text" type="text" class="form-control form-control mb-3" name="age" placeholder="age" required="">
+                      <input class="text" type="text" ngModel class="form-control form-control mb-3" name="age" placeholder="age" required="">
                     </div>
                     <div class="col-sm-6 form-group">
                       <label for="">Téléphone*</label>
-                      <input class="text" type="text" class="form-control form-control mb-3" name="telephone" placeholder="Téléphone" required="">
+                      <input class="text" type="text" ngModel class="form-control form-control mb-3" name="telephone" placeholder="Téléphone" required="">
                     </div>
                     </div>
                     <div class="row">
                       <div class="col-sm-6 form-group">
                         <label for="">Email</label>
-                        <input class="text email" type="email" class="form-control form-control mb-3" name="email" placeholder="Email" required="">
+                        <input class="text email" type="email" ngModel class="form-control form-control mb-3" name="email" placeholder="Email" required="">
                       </div>
                       <div class="col-sm-6 form-group">
                         <label for="">Login</label>
-                        <input class="text" type="text" class="form-control form-control mb-3" name="login" placeholder="User name" required="">
+                        <input class="text" type="text"  ngModel class="form-control form-control mb-3" name="login" placeholder="User name" required="">
                       </div>
                       </div>
               <div class="row">
                   <div class="col-sm-6 form-group">
                     <label for="">Password</label>
-                    <input class="text" type="password" class="form-control form-control mb-3" name="password" placeholder="Password" required="">
+                    <input class="text" type="password" ngModel class="form-control form-control mb-3" name="password" placeholder="Password" required="">
                 </div>
                 <div class="col-sm-6 form-group">
                   <label for="">Genre</label>
-                  <select class="form-control" name="genre" id="sel1">
+                  <select class="form-control" ngModel name="genre" id="sel1">
                     <option>Homme</option>
                     <option>Femme</option>
                   </select>
@@ -82,8 +82,8 @@
               </div>
               <div class="row">
                 <div class="col-sm-6 form-group">
-                  <label for="">Statut</label>
-                    <select class="form-control" name="profile" id="sel1">
+                  <label for="">Statut </label>
+                    <select class="form-control" ngModel name="profile" id="sel1">
                      <option>Active</option>
                      <option>Desactive</option>
                     </select>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="col-sm-6 form-group">
                   <label for="sel1">Profile</label>
-                  <select class="form-control" name="profile" id="sel1">
+                  <select class="form-control" ngModel name="profile" id="sel1">
                     <option>Apprenant</option>
                     <option>Formateur</option>
                   </select>
@@ -101,11 +101,11 @@
                 <div class="row">
                   <div class="col-sm-6 form-group">
                     <label for="">Date de Création</label>
-                    <input class="text" type="date" class="form-control mb-3" name="profile" placeholder="Date de Création" required="">
+                    <input class="text" type="date" ngModel  class="form-control mb-3" name="profile" placeholder="Date de Création" required="">
                   </div>
                   <div class="col-sm-6 form-group">
                     <label for="">Date de Modification</label>
-                    <input class="text" type="date" class="form-control mb-3" name="profile" placeholder="Date de Modification" required="">
+                    <input class="text" ngModel type="date" class="form-control mb-3" name="profile" placeholder="Date de Modification" required="">
                   </div>
                   </div>
             </div>
