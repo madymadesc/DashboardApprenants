@@ -40,7 +40,6 @@ export class AjouterComponent implements OnInit {
     //   dateModification:new FormControl(''),
     // }
     // );
-    message:boolean=false;
   ngOnInit():void {
 
   }
