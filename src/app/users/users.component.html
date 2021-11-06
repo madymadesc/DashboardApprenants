@@ -7,8 +7,8 @@
     <mat-nav-list class="lat">
       <a mat-list-item href="#"routerLink="/dashboard">Home</a>
       <a mat-list-item href="#"routerLink="/profile">Profile</a>
-      <a mat-list-item href="#"routerLink="/ajouter">Add User</a>
-      <a mat-list-item href="#"routerLink="/users">Users</a>
+      <a mat-list-item href="#"routerLink="/ajouter">Ajouter Utilisateur</a>
+      <a mat-list-item href="#"routerLink="/users">Gestion Utilisateur</a>
     </mat-nav-list>
     <mat-nav-list class="lat">
       <a mat-list-item href="#">Log Out</a>
@@ -24,7 +24,6 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <h1>utilisateurs</h1>
     </mat-toolbar>
     <!-- Add Content Here -->
 
@@ -32,9 +31,8 @@
       <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <ul class="navbar-nav mr-auto">
-      <li><a  href="#" routerLink="/users">Liste</a></li>
+      <li><a  href="#" routerLink="/users">Gestion</a></li>
       <li><a href="#" routerLink="/presence">Presence</a></li>
-      <li><a href="#" routerLink="/modifier">Modifier</a></li>
     </ul>
   </nav>
 </div>
@@ -52,6 +50,7 @@
       <th scope="col">Nom</th>
       <th scope="col">Prénom</th>
       <th scope="col">Profile</th>
+      <th scope="col">Choix</th>
     </tr>
   </thead>
   <tbody>
@@ -59,9 +58,14 @@
       <td>{{item.nom}}</td>
       <td>{{item.prenom}}</td>
       <td>{{item.profil}}</td>
+      <td><input type="checkbox" name="select"></td>
     </tr>
   </tbody>
 </table>
+<div class="bton">
+  <button type="button" class=" delete btn  col-sm-6 form-group">Supprimer</button>
+  <button type="button" routerLink="/modifier" class="modifier btn  col-sm-6 form-group">Modifier</button>
+  </div>
 </div>
 </div>
   </mat-sidenav-content>

@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DashboardApprenants';
+  isAuth = false;
+  Aujoudui = new Date();
 }

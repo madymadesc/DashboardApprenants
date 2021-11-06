@@ -28,10 +28,20 @@ export class ServiceService {
     console.log(data);
     return this.http.post("http://localhost:8080/ajoutUtilisateur", data);
 
+
+
   // Url= 'http://localhost:8080/dash_db/utilisateur';
   // getUsers(){
   //   return this.http.get<Utilisateur[]>(this.Url)
   // }
 
+}
+// ajouteAprenant( utilisateur: any){
+//   console.log("ajouteAprenant: " , utilisateur);
+//   return this.http.post(this.url+"/ajoutUtilisateur", utilisateur);
+// }
+
+listUser(){
+  return this.http.get(this.url+"/getUtilisateurById/{id}");
 }
 }

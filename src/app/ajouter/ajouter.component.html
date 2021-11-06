@@ -7,8 +7,8 @@
     <mat-nav-list class="lat">
       <a mat-list-item href="#"routerLink="/dashboard">Home</a>
       <a mat-list-item href="#"routerLink="/profile">Profile</a>
-      <a mat-list-item href="#"routerLink="/ajouter">Add User</a>
-      <a mat-list-item href="#"routerLink="/users">Users</a>
+      <a mat-list-item href="#"routerLink="/ajouter">Ajouter Utilisateur</a>
+      <a mat-list-item href="#"routerLink="/users">Gestion Utilisateur</a>
     </mat-nav-list>
     <mat-nav-list class="lat">
       <a mat-list-item href="#">Log Out</a>
@@ -32,42 +32,42 @@
     </div>
     <div class="col-lg-12 well">
     <div class="row fboddy">
-          <form class="fbdy" #form="ngForm" (ngSubmit)="SaveData(form)">
+          <form class="fbdy" #form="ngForm" (ngSubmit)="ajout(form.value)">
             <div class="col-sm-12 dboddy">
               <div class="row">
                   <div class="col-sm-6 form-group">
                     <label for="">Nom</label>
-                    <input class="text" type="text" ngModel class="form-control form-control mb-3" name="nom" placeholder="nom" required="">
+                    <input class="text" type="text" ngModel class="form-control form-control mb-3" name="nom" required="">
                   </div>
                   <div class="col-sm-6 form-group">
                     <label for="">Prénom</label>
-                    <input class="text" type="text" ngModel class="form-control form-control mb-3" name="prenom" placeholder="prénnom" required="">
+                    <input class="text" type="text" ngModel class="form-control form-control mb-3" name="prenom" required="">
                   </div>
                   </div>
                   <div class="row">
                     <div class="col-sm-6 form-group">
                       <label for="">Age</label>
-                      <input class="text" type="text" ngModel class="form-control form-control mb-3" name="age" placeholder="age" required="">
+                      <input class="text" type="text" ngModel class="form-control form-control mb-3" name="age" required="">
                     </div>
                     <div class="col-sm-6 form-group">
                       <label for="">Téléphone*</label>
-                      <input class="text" type="text" ngModel class="form-control form-control mb-3" name="telephone" placeholder="Téléphone" required="">
+                      <input class="text" type="text" ngModel class="form-control form-control mb-3" name="telephone" required="">
                     </div>
                     </div>
                     <div class="row">
                       <div class="col-sm-6 form-group">
                         <label for="">Email</label>
-                        <input class="text email" type="email" ngModel class="form-control form-control mb-3" name="email" placeholder="Email" required="">
+                        <input class="text email" type="email" ngModel class="form-control form-control mb-3" name="email" required="">
                       </div>
                       <div class="col-sm-6 form-group">
                         <label for="">Login</label>
-                        <input class="text" type="text"  ngModel class="form-control form-control mb-3" name="login" placeholder="User name" required="">
+                        <input class="text" type="text"  ngModel class="form-control form-control mb-3" name="login" required="">
                       </div>
                       </div>
               <div class="row">
                   <div class="col-sm-6 form-group">
                     <label for="">Password</label>
-                    <input class="text" type="password" ngModel class="form-control form-control mb-3" name="password" placeholder="Password" required="">
+                    <input class="text" type="password" ngModel class="form-control form-control mb-3" name="password" required="">
                 </div>
                 <div class="col-sm-6 form-group">
                   <label for="">Genre</label>
@@ -81,16 +81,16 @@
                 <div class="col-sm-6 form-group">
                   <label for="">Statut </label>
                     <select class="form-select" ngModel name="status_utilisateur" id="sel1">
-                     <option>Active</option>
-                     <option>Desactive</option>
+                     <option>activer</option>
+                     <option>desactiver</option>
                     </select>
                     <br>
                 </div>
                 <div class="col-sm-6 form-group">
                   <label for="sel1">Profile</label>
                   <select class="form-select" ngModel name="profil" id="sel1">
-                    <option>Apprenant</option>
-                    <option>Formateur</option>
+                    <option>apprenant</option>
+                    <option>formateur</option>
                   </select>
                   <br>
                 </div>

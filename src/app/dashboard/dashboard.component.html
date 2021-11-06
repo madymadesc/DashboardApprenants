@@ -7,8 +7,8 @@
     <mat-nav-list class="lat">
       <a mat-list-item href="#"routerLink="/dashboard">Home</a>
       <a mat-list-item href="#"routerLink="/profile">Profile</a>
-      <a mat-list-item href="#"routerLink="/ajouter">Add User</a>
-      <a mat-list-item href="#"routerLink="/users">Users</a>
+      <a mat-list-item href="#"routerLink="/ajouter">Ajouter Utilisateur</a>
+      <a mat-list-item href="#"routerLink="/users">Gestion Utilisateur</a>
     </mat-nav-list>
     <mat-nav-list class="lat">
       <a mat-list-item href="#">Log Out</a>
@@ -24,12 +24,14 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <h1>Dashboard</h1>
+
     </mat-toolbar>
     <!-- Add Content Here -->
+    <h1>Dashboard</h1>
 
     <div id="global">
       <h1>Bienvenue !!!!</h1>
+      <p>  {{ Aujor | date: ' EEEE d  MMMM y '| uppercase}}</p>
     <div id="gauche">
     <div class="cercle col-xs-2 col-xs-offset-1 col-sm_offset-1 col-sm-3">
       <br>

@@ -7,8 +7,8 @@
     <mat-nav-list class="lat">
       <a mat-list-item href="#"routerLink="/dashboard">Home</a>
       <a mat-list-item href="#"routerLink="/profile">Profile</a>
-      <a mat-list-item href="#"routerLink="/ajouter">Add User</a>
-      <a mat-list-item href="#"routerLink="/users">Users</a>
+      <a mat-list-item href="#"routerLink="/ajouter">Ajouter Utilisateur</a>
+      <a mat-list-item href="#"routerLink="/users">Gestion Utilisateur</a>
     </mat-nav-list>
     <mat-nav-list class="lat">
       <a mat-list-item href="#">Log Out</a>
@@ -24,69 +24,85 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Modifier</span>
     </mat-toolbar>
     <!-- Add Content Here -->
     <div class="container">
-      <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <ul class="navbar-nav mr-auto">
-      <li><a  href="#" routerLink="/users">Liste</a></li>
-      <li><a href="#" routerLink="/presence">Presence</a></li>
-      <li><a href="#" routerLink="/modifier">Modifier</a></li>
-    </ul>
-  </nav>
-</div>
-</div>
-<p></p>
-<!-- hhhhhhhhhhhhhhhhhhh -->
-<div class="container fboddy">
-  <div class="container">
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">Nom</th>
-      <th scope="col">Prénom</th>
-      <th scope="col">Profile</th>
-      <th scope="col">Choix</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr >
-      <td>Camara</td>
-      <td>Mady</td>
-      <td>Apprenant</td>
-      <td><input type="checkbox" name="select"></td>
-
-    </tr>
-    <tr >
-      <td>Camara</td>
-      <td>Mady</td>
-      <td>Apprenant</td>
-      <td><input type="checkbox" name="select"></td>
-
-    </tr>
-    <tr >
-      <td>Camara</td>
-      <td>Mady</td>
-      <td>Apprenant</td>
-      <td><input type="checkbox" name="select"></td>
-
-    </tr>
-    <tr >
-      <td>Camara</td>
-      <td>Mady</td>
-      <td>Apprenant</td>
-      <td><input type="checkbox" name="select"></td>
-    </tr>
-  </tbody>
-</table>
-<div class="bton">
-<button type="button" class=" delete btn  col-sm-6 form-group">Supprimer</button>
-<button type="button" class="modifier btn  col-sm-6 form-group">Modifier</button>
-</div>
-</div>
-</div>
+      <div class="text-center">
+        <img class="mx-auto d-block" src="assets/images/userm.png" alt="Up Users">
+    </div>
+    <div class="col-lg-12 well">
+    <div class="row fboddy">
+          <form class="fbdy" >
+            <div class="col-sm-12 dboddy">
+              <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <label for="">Nom</label>
+                    <input class="text" type="text" ngModel class="form-control form-control mb-3" name="nom" required="">
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <label for="">Prénom</label>
+                    <input class="text" type="text" ngModel class="form-control form-control mb-3" name="prenom" required="">
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 form-group">
+                      <label for="">Age</label>
+                      <input class="text" type="text" ngModel class="form-control form-control mb-3" name="age" required="">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                      <label for="">Téléphone*</label>
+                      <input class="text" type="text" ngModel class="form-control form-control mb-3" name="telephone" required="">
+                    </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6 form-group">
+                        <label for="">Email</label>
+                        <input class="text email" type="email" ngModel class="form-control form-control mb-3" name="email" required="">
+                      </div>
+                      <div class="col-sm-6 form-group">
+                        <label for="">Login</label>
+                        <input class="text" type="text"  ngModel class="form-control form-control mb-3" name="login" required="">
+                      </div>
+                      </div>
+              <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <label for="">Password</label>
+                    <input class="text" type="password" ngModel class="form-control form-control mb-3" name="password" required="">
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label for="">Genre</label>
+                  <select class="form-select" ngModel name="genre" id="sel1">
+                    <option>Homme</option>
+                    <option>Femme</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <label for="">Statut </label>
+                    <select class="form-select" ngModel name="status_utilisateur" id="sel1">
+                     <option>activer</option>
+                     <option>desactiver</option>
+                    </select>
+                    <br>
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label for="sel1">Profile</label>
+                  <select class="form-select" ngModel name="profil" id="sel1">
+                    <option>apprenant</option>
+                    <option>formateur</option>
+                  </select>
+                  <br>
+                </div>
+                </div>
+            </div>
+            <div class="form-group bton">
+              <button type="submit" class="btn form-control form-control mb-3">Modifier</button>
+              </div>
+          </form>
+          </div>
+    </div>
+    </div>
 <!-- ID Column -->
 
   </mat-sidenav-content>
