@@ -21,10 +21,9 @@ export class ModifierComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver,private service: ServiceService) {}
 
   ngOnInit(){
-    this.service.listApprenant().subscribe((data:any) =>{
-      this.mod=data,
-      console.log(data)
-    });
-  }
 
+  }
+  modifier(id:any){
+    this.service
+  }
 }

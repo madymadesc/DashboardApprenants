@@ -7,7 +7,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { DashboardComponent } from './dashboard.component';
+import DashboardComponent from './dashboard.component';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;

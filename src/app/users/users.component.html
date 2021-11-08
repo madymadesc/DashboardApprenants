@@ -33,6 +33,8 @@
       <ul class="navbar-nav mr-auto">
       <li><a  href="#" routerLink="/users">Gestion</a></li>
       <li><a href="#" routerLink="/presence">Presence</a></li>
+      <li><a href="#" routerLink="/presence">Gerer la Presence</a></li>
+
     </ul>
   </nav>
 </div>
@@ -59,12 +61,14 @@
       <td>{{item.prenom}}</td>
       <td>{{item.profil}}</td>
       <td><input type="checkbox" name="select"></td>
+      <td><button type="button" (click)="suprime(item.id)" class=" delete btn  col-sm-6 form-group">Supprimer</button></td>
+      <td><button type="button" (click)="user(item.id)" routerLink="/modifier" class="modifier btn  col-sm-6 form-group">Modifier</button></td>
     </tr>
   </tbody>
 </table>
 <div class="bton">
-  <button type="button" class=" delete btn  col-sm-6 form-group">Supprimer</button>
-  <button type="button" routerLink="/modifier" class="modifier btn  col-sm-6 form-group">Modifier</button>
+  <button type="button" (click)="suprime(item.id)" class=" delete btn  col-sm-6 form-group">Supprimer</button>
+  <button type="button" (click)="user(item.id)" routerLink="/modifier" class="modifier btn  col-sm-6 form-group">Modifier</button>
   </div>
 </div>
 </div>

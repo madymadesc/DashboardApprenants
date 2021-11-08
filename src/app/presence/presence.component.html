@@ -64,11 +64,11 @@
       <th scope="col">Email</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngFor="let item of items">
     <tr>
-      <td>CAMARA</td>
-      <td>Mady</td>
-      <td>mail@mail.com</td>
+      <td>{{item.nom}}</td>
+      <td>{{item.prenom}}</td>
+      <td>{{item.profil}}</td>
     </tr>
   </tbody>
 </table>

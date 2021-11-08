@@ -1,47 +1,37 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Utilisateur } from '../module/utilisateur';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
   constructor(private http:HttpClient) { }
-
-   //   this.http.get('http://localhost:8080/apprenantOdk/apprenant')
-  //   .subscribe(data => {
-  //     this.list.push(data);
-  //     }
-  //   );
-  // }
   url='http://localhost:8080/dashboard';
 
-  // getList(){
-  //     return this.list;
-  // listApprenant(){
-  //   return this.http.get('http://localhost:8080/dashboard/getAllUtilisateur');
-  // }
-  listApprenant(){
+  listUtilisateur(){
     return this.http.get(this.url+"/getAllUtilisateur");
   }
   ajouterApprenant(data: any){
     console.log(data);
     return this.http.post("http://localhost:8080/ajoutUtilisateur", data);
-
-
-
-  // Url= 'http://localhost:8080/dash_db/utilisateur';
-  // getUsers(){
-  //   return this.http.get<Utilisateur[]>(this.Url)
-  // }
-
 }
-// ajouteAprenant( utilisateur: any){
-//   console.log("ajouteAprenant: " , utilisateur);
-//   return this.http.post(this.url+"/ajoutUtilisateur", utilisateur);
-// }
 
 listUser(){
   return this.http.get(this.url+"/getUtilisateurById/{id}");
+}
+suprime(id:any){
+  return this.http.delete(this.url+"/deleteUtilisateur/"+id, {responseType: 'text'})
+}
+listapprenant(){
+  return this.http.get(this.url+"/profile=apprenant");
+}
+listformateur(){
+  return this.http.get(this.url+"/profile=formateur")
+}
+modifierUser(id:any){
+  return this.http.put(this.url+"/modifyUtilisateur/"+id, id)
+}
+User(id:any){
+  return this.http.get(this.url+"getUtilisateurById/"+id,{responseType:'text'} )
 }
 }

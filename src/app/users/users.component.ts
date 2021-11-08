@@ -10,6 +10,7 @@ import { ServiceService } from '../Service/service.service';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
+  [x: string]: any;
   items:any;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -21,10 +22,25 @@ export class UsersComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver, private serv: ServiceService) {}
 
   ngOnInit(){
-    this.serv.listApprenant().subscribe((data:any) =>{
+    this.Listutilisateur()
+
+  }
+  Listutilisateur(){
+    this.serv.listUtilisateur().subscribe((data:any) =>{
       this.items=data,
       console.log(data)
     });
+  }
+  suprime(id:any){
+    this.serv.suprime(id).subscribe(data=>{
+      console.log(data)
+      this.Listutilisateur()
+    })
+  }
+  user(id:any){
+    this.serv.User(id).subscribe(data=>{
+
+    })
   }
 
 }
