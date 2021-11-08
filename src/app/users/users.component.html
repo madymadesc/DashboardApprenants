@@ -62,14 +62,14 @@
       <td>{{item.profil}}</td>
       <td><input type="checkbox" name="select"></td>
       <td><button type="button" (click)="suprime(item.id)" class=" delete btn  col-sm-6 form-group">Supprimer</button></td>
-      <td><button type="button" (click)="user(item.id)" routerLink="/modifier" class="modifier btn  col-sm-6 form-group">Modifier</button></td>
+      <td> <button type="button"  routerLink="/modifier/{{item.id}}" class="modifier btn  col-sm-6 form-group">Modifier</button></td>
     </tr>
   </tbody>
 </table>
-<div class="bton">
+<!-- <div class="bton">
   <button type="button" (click)="suprime(item.id)" class=" delete btn  col-sm-6 form-group">Supprimer</button>
-  <button type="button" (click)="user(item.id)" routerLink="/modifier" class="modifier btn  col-sm-6 form-group">Modifier</button>
-  </div>
+  <button type="button"  routerLink="/modifier/{{item.id}}" class="modifier btn  col-sm-6 form-group">Modifier</button>
+  </div> -->
 </div>
 </div>
   </mat-sidenav-content>

@@ -28,10 +28,10 @@ listapprenant(){
 listformateur(){
   return this.http.get(this.url+"/profile=formateur")
 }
-modifierUser(id:any){
-  return this.http.put(this.url+"/modifyUtilisateur/"+id, id)
+modifierUser(id:any, data : any){
+  return this.http.put(`${this.url+"/modifyUtilisateur"}/${id}`,data);
 }
 User(id:any){
-  return this.http.get(this.url+"getUtilisateurById/"+id,{responseType:'text'} )
+  return this.http.get(`${this.url+"/getUtilisateurById/"}/${id}`);
 }
 }

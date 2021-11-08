@@ -37,10 +37,10 @@ export class UsersComponent implements OnInit {
       this.Listutilisateur()
     })
   }
-  user(id:any){
-    this.serv.User(id).subscribe(data=>{
+  // user(id:any){
+  //   this.serv.User(id).subscribe(data=>{
 
-    })
-  }
+  //   })
+  // }
 
 }
